@@ -3,4 +3,4 @@ gunicorn
 gensim
 jieba
 pymongo
-resume_for_similar
+
