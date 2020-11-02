@@ -1,9 +1,8 @@
 from flask import *
 import resume_for_similar
-from gensim.models import Word2Vec
 import gensim
 import jieba
-import json
+
 app = Flask(__name__)
 @app.route('/forcompany')
 def page():
