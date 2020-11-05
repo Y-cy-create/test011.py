@@ -19,19 +19,22 @@
                <p><label>請詳述給求職者貴公司或貴職缺的應徵須知內容:</label>
                <p><textarea style="font-size:16px;padding:10px"  name="detail"   placeholder="Ex:本公司創立多年，希望能找更多有為青年一起開拓未來市場..." rows="20" cols="90" required></textarea></p>
                <br>
-               <p><button type = 'submit'>確認送出</button></p>
-                        <table>
-                        <thead>
-                          <th style="font-size:26px">適合的履歷有:</th>
+               <p><button type = 'submit' style="background-color:#C2C2FF">確認送出</button></p>
+                        <table style="border:3px #cccccc solid;" cellpadding="10" border='1'>
 
+                        <thead>
+                            <th style="font-size:26px">編號:</th>
+                            <th style="font-size:26px">適合的履歷有:</th>
                         </thead>
                         <tbody>
-                            {% for i in url_list %}
-                               <tr>
+                            {% for (i,url) in L %}
 
-                                   <td><a href="{{i}}" target="_blank">{{ i }}</a></td>
+                               <tr>
+                                   <td>{{ i }}</td>
+                                   <td><a href="{{url}}" target="_blank" style="font-size:20px" class = 'html-ex bare'>{{ url }}</a></td>
                                </tr>
                             {% endfor%}
+
                         </tbody>
                     </table>
     </form>
